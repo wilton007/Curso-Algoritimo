@@ -1,17 +1,21 @@
-algoritmo "semnome"
+algoritmo "Operadores Relacionais e Logicos"
 
 
 var
-
-A, B, C : Inteiro
-AA : logico
+nome : caractere
+peso, altura, resultado : Real
+resultado2 : logico
 inicio
-A <- 2
-B <- 3
-C <- 5
+Escreval ("Calcule Seu IMC:")
+Escreval ("Digite Seu Nome:")
+Leia (nome)
+Escreval ("Digite Seu Peso:")
+Leia (peso)
+Escreval ("Digite Sua Altura:")
+Leia (altura)
 
-Escreval (A > B)
-AA<- (A<>B) e (C=A)
-Escreva (AA)
+resultado <-  peso / (altura * altura)
+resultado2 <- (resultado >= 18.50) e (resultado <= 24.90)
+Escreva (nome, " Seu Resultado é: ",resultado2," Você está com o peso ideal")
 
 fimalgoritmo
