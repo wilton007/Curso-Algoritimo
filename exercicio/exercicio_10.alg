@@ -1,36 +1,46 @@
-algoritmo "futebol"
+algoritmo "Departamentodetransito"
 
 var
-gol1, gol2, total : inteiro
+nota1, nota2, total : real
 
 
 inicio
 Escreval( "-------------------------------------")
-      Escreval ("CRUZEIRO X GALO")
+      Escreval ("ESCOLA JAVALI CANSADO")
       Escreval( "-------------------------------------")
-      Escreva ("QUANTOS GOLS DO CRUZEIRO: ")
-Leia (gol1)
-     Escreva ("QUANTOS GOLS DO GALO: ")
-Leia (gol2)
+      Escreva ("PRIMEIRA NOTA: ")
+Leia (nota1)
+     Escreva ("SEGUNDA NOTA: ")
+Leia (nota2)
 Escreval( "-------------------------------------")
+total <- (nota1 + nota2) /2
 
-se (gol1 > gol2)entao
-total <- gol1 - gol2
-Senao
-total <- gol2 - gol1
+se (total >= 9)entao
+   Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: A ")
+senao
+     se (total <= 8.9) e (total >= 8)entao
+   Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: B ")
+senao
+      se (total <= 7.9) e (total >= 7)entao
+   Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: C ")
+senao
+     se (total <= 6.9) e (total >= 6)entao
+   Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: D ")
+senao
+     se (total <= 5.9) e (total >= 5)entao
+   Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: E ")
+senao
+     Escreval ("MEDIA: ",total:5:2)
+   Escreval ("APROVEITAMENTO: F ")
+         Fimse
+       Fimse
+     Fimse
+   Fimse
 FimSe
-Escolha total
-Caso 0
-Escreval ("DIFERENÇA: ",total)
-Escreval("STATUS: EMPATE")
-Escreva ("-------------------------------------")
-Caso 1,2,3,4
-Escreval ("DIFERENÇA: ",total)
-Escreval("STATUS: PARTIDA NORMAL")
-Escreva ("-------------------------------------")
-Caso 5,6,7,8,9,10
-Escreval ("DIFERENÇA: ",total)
-Escreval("STATUS: GOLEADA")
-Escreva ("-------------------------------------")
-FimEscolha
+
 fimalgoritmo
